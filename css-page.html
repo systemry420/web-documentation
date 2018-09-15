@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="app.css" />
+</head>
+<body>
+        <nav id="navbar">
+                <ul>
+                    <li><a href="html-page.html">HTML</li></a>
+                    <li><a href="css-page.html">CSS</li></a>
+                    <li><a href="js-page.html">JAVASCRIPT</li></a>
+                </ul>
+        </nav>
+
+    <aside>
+            <header><h2>CSS Parts</h2></header>
+        <nav id="aside">
+            <ul>
+                <a class="nav-link" href="#css-intro">
+                    <li>Introduction</li>
+                </a>
+                <a class="nav-link" href="#css-border">
+                    <li>CSS Borders</li>
+                </a>
+                <a class="nav-link" href="#css-margin">
+                    <li>CSS Margin</li>
+                </a>
+                <a class="nav-link" href="#css-padding">
+                    <li>CSS Padding</li>
+                </a>
+                <a class="nav-link" href="#css-dimensions">
+                    <li>CSS Dimensions</li>
+                </a>
+                <a class="nav-link" href="#css-text">
+                    <li>CSS Text</li>
+                </a>
+                <a class="nav-link" href="#css-fonts">
+                    <li>CSS Fonts</li>
+                </a>
+                <a class="nav-link" href="#css-layout">
+                    <li>CSS Layout</li>
+                </a>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="main-doc">
+        <section class="main-section" id="css-intro">
+            <article>
+                <header><h2>Introduction</h2></header> 
+                   CSS is a language that describes the style of an HTML document.   
+                <h3>Three Ways to Insert CSS</h3>
+                   There are three ways of inserting a style sheet:   
+                <ul>
+                    <li>External style sheet</li>
+                    <li>Internal style sheet</li>
+                    <li>Inline style</li>
+                </ul>
+                   The best type is External Style Sheet, for many reasons    
+                   The HTML page should include a reference to the External Style Sheet as the following:   
+                <code> <h5>Example</h5>
+                    &lt;head&gt;<br/>&nbsp; &lt;link rel="stylesheet" type="text/css" href="mystyle.css"><br/>&lt;/head&gt;"
+                </code>
+                   The style sheet file must be saved with a .css extension. Here an example:   
+                <code> <h5>Example</h5>
+                    h1 {
+                            &nbsp;&nbsp;&nbsp; color: navy;
+                            &nbsp;&nbsp;&nbsp; height: 20px;
+                        }
+                </code>
+                <p class="note">Note: Do not add a space between the property value and the unit (such as margin-left: 20 px;). The correct way is: margin-left: 20px;   
+                
+                <h3>CSS Colors</h3>
+                   
+                        Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.<br/>
+                        HTML supports <a href="https://www.w3schools.com/colors/colors_names.asp">140 standard color names</a>.
+                   
+                <h4>Background Color</h4>
+                   We can set the background color for HTML elements:   
+                <code> <h5>Example</h5>
+                    p {
+                        &nbsp;&nbsp;&nbsp;background-color:Tomato;
+                    }
+                </code>
+                <h4>Text Color</h4>
+                   To set the color of text:   
+                <code> <h5>Example</h5>
+                    p {
+                        &nbsp;&nbsp;&nbsp;color: blue;
+                    }
+                </code>
+                <h3>Color Values</h3>
+                In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values:
+                <h4>RGB Values</h4>
+                RGB is the abbreviation of Red, Green, Blue.<br/>
+                So to set the color, we have to pass a number which varies form 0 to 255 representing the color:
+                <code> <h5>Example</h5>
+                    p {   // green color 
+                        &nbsp;&nbsp;&nbsp;color: rgb(0, 255, 0);
+                    }
+                </code>
+                <h4>Hexadecimal Values</h4>
+                In HTML, a color can be specified using a hexadecimal value in the form:
+                <span class="snippet">#rrggbb </span>                            
+                <br/>Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).
+                <br/>The values follows the hexadecimal numbering, which contains 16 characters, from lowest to highest (0-9, A, B, C, D, E, F).
+                <code> <h5>Example</h5>
+                    p {  // for blue color
+                        &nbsp;&nbsp;&nbsp;color: #0000FF;
+                    }
+                </code>
+                <h4>HSL Value</h4>
+                   In HTML, a color can be specified using hue, saturation, and lightness (HSL) in the form:
+                <br/>Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+                   
+                <code> <h5>Example</h5>
+                    p {  // for red color
+                        &nbsp;&nbsp;&nbsp;color: hsl(0, 100%, 50%);
+                    }
+                </code>
+            </article>
+        </section>
+        
+        <section class="main-section" id="css-border">
+            <article>
+                <header>
+                    <h2>CSS Border</h2>
+                </header>
+                   The CSS border properties allow you to specify the style, width, and color of an element's border.   
+                <h4>Border Style</h4>
+                   The <span class="snippet">border-style</span> property specifies what kind of border to display.   
+                <code> <h5>Example</h5>
+                    p {
+                        &nbsp;&nbsp;&nbsp; border-style: dotted;
+                        &nbsp;&nbsp;&nbsp; // or one of the values: dashed, solid, double, groove, ridge, inset, outset, none.
+                    }
+                </code>
+                <h4>Border Width</h4>
+                   The <span class="snippet">border-width</span> property specifies the width of the four borders.
+                    <br/>The width can be set as a specific size (in px, pt, cm, em, etc)
+                   
+                <code> <h5>Example</h5>
+                    p {
+                        &nbsp;&nbsp;&nbsp; border-style: solid;
+                        &nbsp;&nbsp;&nbsp; border-width: 5px;
+                    }                        
+                </code>
+                <h4>Border Color</h4>
+                   The <span class="snippet">border-color</span> property is used to set the color of the four borders.   
+                <code> <h5>Example</h5>
+                    p {
+                        &nbsp;&nbsp;&nbsp; border-style: solid;
+                        &nbsp;&nbsp;&nbsp; border-color: red;
+                    }
+                </code>
+                <h4>Border - Shorthand Property</h4>
+                <code> <h5>Example</h5>
+                    p {
+                        &nbsp;&nbsp;&nbsp; border: 5px solid red;
+                    }
+                </code>
+                <h4>Left Border</h4>
+                <code> <h5>Example</h5>
+                    p {
+                        &nbsp;&nbsp;&nbsp; border-left: 6px solid red;
+                    }
+                </code>
+                <h4>Rounded Borders</h4>
+                   The <span class="snippet">border-radius</span> property is used to add rounded borders to an element:   
+                <code> <h5>Example</h5>
+                    p {
+                        &nbsp;&nbsp;&nbsp; border: 2px solid red;
+                        &nbsp;&nbsp;&nbsp; border-radius: 5px;
+                    }
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="css-margin">
+            <article>
+                <header>
+                        <h2>CSS Margin</h2>
+                </header>
+                       The CSS margin properties are used to create space around elements, outside of any defined borders.   
+                    <h4>Margin - Individual Sides</h4>
+                       CSS has properties for specifying the margin for each side of an element:    
+                    <ul>
+                        <li>margin-top</li>
+                        <li>margin-right</li>
+                        <li>margin-bottom</li>
+                        <li>margin-left</li>
+                    </ul>
+                    <code> <h5>Example</h5>
+                        p {
+                            &nbsp;&nbsp;&nbsp; margin-top: 100px;
+                            &nbsp;&nbsp;&nbsp; margin-bottom: 100px;
+                            &nbsp;&nbsp;&nbsp; margin-right: 150px;
+                            &nbsp;&nbsp;&nbsp; margin-left: 80px;
+                        }
+                    </code>
+                   <h4>Margin - Shorthand Property</h4>
+                   If the margin property has one value:
+                   <code> <h5>Example</h5>
+                        p {
+                            &nbsp;&nbsp;&nbsp; margin: 25px;
+                        }
+                   </code>
+
+                   <h4>The auto Value</h4>
+                   You can set the margin property to auto to horizontally center the element within its container.
+                   <code> <h5>Example</h5>
+                        div {
+                            &nbsp;&nbsp;&nbsp; width: 300px;
+                            &nbsp;&nbsp;&nbsp; margin: auto;
+                            &nbsp;&nbsp;&nbsp; border: 1px solid red;
+                        }
+                   </code>
+                </article>
+        </section>
+
+        <section class="main-section" id="css-padding">
+            <article>
+                <header>
+                    <h2>CSS Padding</h2>
+                </header>
+                   The CSS padding properties are used to generate space around an element's content, inside of any defined borders.   
+                <h4>Padding - Individual Sides</h4>
+                CSS has properties for specifying the padding for each side of an element:
+                <ul>
+                    <li>padding-top</li>
+                    <li>padding-right</li>
+                    <li>padding-bottom</li>
+                    <li>padding-left</li>
+                </ul>
+                <code> <h5>Example</h5>
+                    div {
+                        &nbsp;&nbsp;&nbsp; padding-top: 50px;
+                        &nbsp;&nbsp;&nbsp; padding-right: 30px;
+                        &nbsp;&nbsp;&nbsp; padding-bottom: 50px;
+                        &nbsp;&nbsp;&nbsp; padding-left: 80px;
+                    }                        
+                </code>
+                <h4>Padding - Shorthand Property</h4>
+                If the padding property has two values:<br/>
+                <code> <h5>Example</h5>div {
+                        &nbsp;&nbsp;&nbsp; padding: 25px 50px;
+                }
+                </code>
+                <ul>
+                    <li>top and bottom paddings are 25px</li>
+                    <li>right and left paddings are 50px</li>
+                </ul>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="css-dimensions">
+            <article>
+                <header>
+                    <h2>CSS Height and Width</h2>
+                </header>
+                The height and width properties are used to set the height and width of an element.<br/>
+                They can be specified in length values, like px, cm, etc., or in percent (%) of the containing block.
+                <code> <h5>Example</h5>
+                    div {
+                        &nbsp;&nbsp;&nbsp; height: 200px;
+                        &nbsp;&nbsp;&nbsp; width: 50%;
+                        &nbsp;&nbsp;&nbsp; background-color: powderblue;
+                    }
+                </code>
+
+                <h4>Setting max-width</h4>
+                The max-width property is used to set the maximum width of an element.
+                <code> <h5>Example</h5>
+                    div {
+                        &nbsp;&nbsp;&nbsp; max-width: 500px;
+                    }
+                </code>
+                
+            </article>
+        </section>
+
+        <section class="main-section" id="css-text">
+            <article>
+                <header>
+                    <h2>CSS Text</h2>
+                </header>
+                <h4>Text Color</h4>
+                The <span class="snippet">color</span> property is used to set the color of the text. The color is specified by:
+                <ul>
+                       <li> a color name - like "red"</li>
+                       <li> a HEX value - like "#ff0000"</li>
+                       <li> an RGB value - like "rgb(255,0,0)"</li>
+                </ul>
+                <code><h5>Example</h5>
+                    body {
+                        &nbsp;&nbsp;&nbsp; color: blue;
+                    }
+                    
+                    h1 {
+                        &nbsp;&nbsp;&nbsp; color: green;
+                    }
+                </code>
+
+                <h4>Text Alignment</h4>
+                The <span class="snippet">text-align</span> property is used to set the horizontal alignment of a text.
+                <code> <h5>Example</h5>
+                    h1 {
+                        &nbsp;&nbsp;&nbsp; text-align: center;
+                        &nbsp;&nbsp;&nbsp; // or   text-align: left;  or  text-align: right;
+                    }
+                </code>
+                <h4>Letter Spacing</h4>
+                The <span class="snippet">letter-spacing</span> property is used to specify the space between the characters in a text.
+                <code> <h5>Example</h5>
+                    h1 {
+                        &nbsp;&nbsp;&nbsp; letter-spacing: 3px;
+                    }
+                </code>
+                    
+            </article>
+        </section>
+
+        <section class="main-section" id="css-fonts">
+            <article>
+                <header>
+                    <h2>CSS Fonts</h2>
+                </header>
+                The CSS font properties define the font family, boldness, size, and the style of a text.
+                <h4>Font Family</h4>
+                The font family of a text is set with the <span class="snippet">font-family</span> property.
+                <code> <h5>Example</h5>
+                    h1 {
+                        &nbsp;&nbsp;&nbsp; font-family: "Times New Roman", Times, serif;
+                    }
+                </code>
+
+                <h4>Font Size</h4>
+                The <span class="snippet">font-size</span> property sets the size of the text.
+                <code> <h5>Example</h5>
+                    h1 {
+                        &nbsp;&nbsp;&nbsp; font-size: 40px;
+                        &nbsp;&nbsp;&nbsp; font-size: 1em; /* 1em = 16px */
+                    }
+                </code>
+
+                <h4>Font Weight</h4>
+                The <span class="snippet">font-weight</span> property specifies the weight of a font:
+                <code> <h5>Example</h5>
+                    h1 {
+                        &nbsp;&nbsp;&nbsp; font-weight: bold;
+                    }
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="css-layout">
+            <article>
+                <header>
+                    <h2>CSS Layout</h2>
+                </header>
+                <h4>The position Property</h4>
+                The <span class="snippet">position</span> property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+                There are five different position values:
+                <ul>
+                    <li>static</li>
+                    <li>relative</li>
+                    <li>fixed</li>
+                    <li>absolute</li>
+                    <li>sticky</li>
+                </ul>
+                Elements are then positioned using the <span class="snippet">top, bottom, left</span>, and <span class="snippet">right</span> properties.<br/>
+                However, these properties will not work unless the <span class="snippet">position</span> property is set first.
+                <h4>position: static;</h2>
+                HTML elements are positioned static by default.<br/>
+                An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page.<br/>
+                <code> <h5>Example</h5>
+                    div {
+                        &nbsp;&nbsp;&nbsp; position: static;
+                        &nbsp;&nbsp;&nbsp; border: 3px solid #73AD21;
+                    }
+                </code>
+                <h4>position: relative;</h4>
+                An element with position: relative; is positioned relative to its normal position.<br/>
+                Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.
+                <code> <h5>Example</h5>
+                    div {
+                        &nbsp;&nbsp;&nbsp; position: relative;
+                        &nbsp;&nbsp;&nbsp; left: 30px;
+                        &nbsp;&nbsp;&nbsp; border: 3px solid #73AD21;                    }
+                </code>
+                <h4>position: fixed;</h4>
+                An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.<br/>
+                The top, right, bottom, and left properties are used to position the element.<br/>
+                <code> <h5>Example</h5>
+                    div {
+                        &nbsp;&nbsp;&nbsp; position: fixed;
+                        &nbsp;&nbsp;&nbsp; bottom: 0;
+                        &nbsp;&nbsp;&nbsp; right: 0;
+                        &nbsp;&nbsp;&nbsp; width: 300px;
+                        &nbsp;&nbsp;&nbsp; border: 3px solid #73AD21;
+                    }
+                </code>
+                <h4>position: absolute;</h4>
+                An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+                <code> <h5>Example</h5>
+                    div {
+                        &nbsp;&nbsp;&nbsp; position: absolute;
+                        &nbsp;&nbsp;&nbsp; top: 80px;
+                        &nbsp;&nbsp;&nbsp; right: 0;
+                        &nbsp;&nbsp;&nbsp; width: 200px;
+                        &nbsp;&nbsp;&nbsp; height: 100px;
+                        &nbsp;&nbsp;&nbsp; border: 3px solid #73AD21;
+                        }
+                </code>
+                <h4>Overlapping Elements</h4>
+                The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
+                <code> <h5>Example</h5>
+                    div {
+                        &nbsp;&nbsp;&nbsp; position: absolute;
+                        &nbsp;&nbsp;&nbsp; left: 0px;
+                        &nbsp;&nbsp;&nbsp; top: 0px;
+                        &nbsp;&nbsp;&nbsp; z-index: -1;
+                        }
+                </code>
+                
+            </article>
+        </section>
+    </main>
+        <script src="main.js"></script>
+</body>
+</html>
