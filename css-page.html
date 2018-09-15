@@ -23,6 +23,9 @@
                 <a class="nav-link" href="#css-intro">
                     <li>Introduction</li>
                 </a>
+                <a class="nav-link" href="#css-selectors">
+                    <li>CSS Selectors</li>
+                </a>
                 <a class="nav-link" href="#css-border">
                     <li>CSS Borders</li>
                 </a>
@@ -124,6 +127,47 @@
             </article>
         </section>
         
+        <section class="main-section" id="css-selectors">
+                <article>
+                    <header>
+                        <h2>CSS Selectors</h2>
+                    </header>
+                    In CSS, selectors are patterns used to select the element(s) you want to style.
+                    <h3>#id Selector</h3>
+                    Style the element with id="firstdiv"
+                    <code> <h5>Example</h5>
+                        &lt;div id="firstdiv"&gt; I'm the first div &lt;/div&gt;<br/> ...
+                        #firstdiv {
+                            &nbsp;&nbsp;&nbsp; background-color: yellow;
+                        }
+                    </code>
+
+                    <h3>.class Selector</h3>
+                    Select and style all elements with class="red".
+                    <code> <h5>Example</h5>
+                        &lt;h2 class="red"&gt; I'm a header with class red &lt;/h2&gt;
+                        &lt;div class="red"&gt; I'm a div with class red &lt;/div&gt;<br/> ...
+                        .firstdiv {
+                            &nbsp;&nbsp;&nbsp; color: red;
+                        }
+                    </code>
+                    <h3>* Selector</h3>
+                    Select all elements, and set their background color to yellow.
+                    <code> <h5>Example</h5>
+                       * {
+                            &nbsp;&nbsp;&nbsp; background-color: yellow;
+                        }
+                    </code>
+                    <h3>element Selector</h3>
+                    Select and style all &lt;p&gt; elements.
+                    <code> <h5>Example</h5>
+                        p {
+                                &nbsp;&nbsp;&nbsp; background-color: lightblue;
+                            }
+                    </code>
+                </article>
+        </section>
+
         <section class="main-section" id="css-border">
             <article>
                 <header>
