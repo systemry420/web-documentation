@@ -45,28 +45,18 @@
     background-color: #4CAF50;
 }
 
-aside{
-    height: 100%;
-    width: 15vw;
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    border-right: 4px solid #bbb;
-}
-
 nav#aside{
     position: fixed;
     min-width: 60px;
-    z-index: 1;
     text-align: center;
-    margin-left: 10px;
+    margin: 30px;
+    border-right: 2px solid #ddd;
 }
 
 #aside ul li{
     display: block;
-    margin: 20px;
+    margin: 0 20px;
     list-style: none;
-    border-bottom: 2px solid #bbb;
     padding-bottom: 20px;
 }
 
@@ -83,19 +73,14 @@ nav#aside{
 
 #main-doc{
     margin-left: 18%;
-    position: relative;
     height: auto;
-    top:0px;
     width: 80vw;
-    display: block;
-    z-index: -22;
 }
 
 .main-section{
-    margin: 40px 0;
-    border: 1px solid #aaa;
+    margin: 50px 0;
+    border-top: none;
     border-radius: 5px;
-    box-shadow: 3px 3px #ccc;
 }
 
 .main-section a{
@@ -111,9 +96,6 @@ nav#aside{
 }
 .main-section article ul li{
     padding:px;
-}
-#css-intro{
-    margin-top: 80px;
 }
 
 .main-section article{
