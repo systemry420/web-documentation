@@ -49,23 +49,27 @@ nav#aside{
     position: fixed;
     min-width: 60px;
     text-align: center;
-    margin: 10px;
     padding: 10px;
     border-right: 2px solid #ddd;
 }
 
+#aside h3{
+    margin: 0 0 15px 0;
+}
+
 #aside ul li{
     display: block;
-    margin: 0 20px;
+    padding: 0 15px;
     list-style: none;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .nav-link{
     text-decoration: none;
     display: block;
     color: green;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.9em;
 }
 
 .nav-link:hover, .nav-link:active{
@@ -106,8 +110,9 @@ nav#aside{
 }
 
 h3, h4{
-    margin-top: 25px;
-
+    margin: 25px 0 5px 0;
+    color: rgb(170, 0, 0);
+    
 }
 
 h2{
@@ -115,6 +120,7 @@ h2{
     text-align: center;
     letter-spacing: 3px;
     color: rgb(170, 0, 0);
+    font-size: 1.8em;
 }
 
 h5{
@@ -146,14 +152,13 @@ code{
     border-left: 5px solid rgb(24, 95, 177);
     margin: 25px 0 !important;
     border-radius: 5px;
-    box-shadow: 2px 2px #bbb;
     font-size: 0.98em;
-    background: linear-gradient(to bottom, #eee 5%,#fff 90%);
+    background: linear-gradient(to bottom, #eee 50%,#fff);
 
 }
 
 @media(max-width:1000px){
-    aside{
+    #aside{
         display: none;
     }
     #main-doc{
@@ -161,7 +166,9 @@ code{
     }
 
     #navbar ul{
-        width: 60%;
+        width: 50%;
     }
-
+    #navbar ul li a{
+        font-size: 1.2em;
+    }
 }
