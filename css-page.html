@@ -67,20 +67,45 @@
                     <li>Internal style sheet</li>
                     <li>Inline style</li>
                 </ul>
-                   The best type is External Style Sheet, for many reasons    
+                <h4>External style sheet</h4>
+                   The best type is External Style Sheet, for many reasons.  
                    The HTML page should include a reference to the External Style Sheet as the following:   
                 <code> <h5>Example</h5>
                     &lt;head&gt;<br/>&nbsp; &lt;link rel="stylesheet" type="text/css" href="mystyle.css"><br/>&lt;/head&gt;"
                 </code>
-                   The style sheet file must be saved with a .css extension. Here an example:   
+                   The style sheet file must be saved with a <span class="snippet">.css</span> extension. Here an example:   
                 <code> <h5>Example</h5>
                     h1 {
                             &nbsp;&nbsp;&nbsp; color: navy;
                             &nbsp;&nbsp;&nbsp; height: 20px;
                         }
                 </code>
-                <p class="note">Note: Do not add a space between the property value and the unit (such as margin-left: 20 px;). The correct way is: margin-left: 20px;   
+                <p class="note">Note: Do not add a space between the property value and the unit (such as <span class="snippet">width:20 px;</span> ).
+                    <br/>The correct way is: <span class="snippet">margin-left: 20px;</span>   
                 
+                <h4>Internal style sheet</h4>
+                It is not recommended to use Internal style sheet, as we should have the style independent from the structure,
+                but we could use it in some cases. The style tag goes inside the head tag:
+                <code> <h5>Example</h5>
+                    &lt;head&gt;
+                    &lt;style type="text/css"&gt;
+                    h1 {
+                            &nbsp;&nbsp;&nbsp; color: navy;
+                        }
+                    &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;h1&gt; hello, I have a style &lt;/h1&gt;
+                    ....
+                </code>
+
+                <h4>Inline style</h4>
+                This style is written inside the declaration of tag, using the "style" attribute.
+                <code>
+                &lt;body&gt;
+                &lt;p style="color:red; font-size: 12px;"&gt; hello, I have inline style. &lt;/p&gt;
+                ....
+                </code> 
                 <h3>CSS Colors</h3>
                    
                         Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.<br/>
@@ -251,7 +276,7 @@
                         }
                     </code>
                    <h4>Margin - Shorthand Property</h4>
-                   If the margin property has one value:
+                   If the margin property has one value, then the value is applied on all sides.
                    <code> <h5>Example</h5>
                         p {
                             &nbsp;&nbsp;&nbsp; margin: 25px;
