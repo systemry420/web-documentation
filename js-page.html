@@ -8,30 +8,323 @@
     <link rel="stylesheet" type="text/css" media="screen" href="app.css" />
 </head>
 <body>
-        <nav id="navbar">
-                <ul>
-                    <li><a href="html-page.html">HTML</li></a>
-                    <li><a href="css-page.html">CSS</li></a>
-                    <li><a href="js-page.html">JAVASCRIPT</li></a>
-                </ul>
-        </nav>
-
-    <aside>
-            <header><h2>JS Parts</h2></header>
-        <nav id="aside">
+    <nav id="navbar">
             <ul>
-                <a class="nav-link" href="#js-intro">
-                    <li>Introduction</li>
-                </a>
-        </nav>
-    </aside>
+                <li><a href="html-page.html">HTML</li></a>
+                <li><a href="css-page.html">CSS</li></a>
+                <li><a href="js-page.html">JAVASCRIPT</li></a>
+            </ul>
+    </nav>
+
+    <nav id="aside">
+        <h3>Basic JavaScript </h3>
+        <ul>
+            <a class="nav-link" href="#js-intro">
+                <li>Introduction</li>
+            </a>
+            <a class="nav-link" href="#js-parts">
+                <li> </li>
+            </a>
+        </ul>
+    </nav>
 
     <main id="main-doc">
-        <section class="main-section" id="">
+        <section class="main-section" id="js-intro">
             <article>
+                <header><h2>Introduction</h2></header> 
+                JavaScript is one of the 3 languages all web developers must learn:  
+                <ul>
+                    <li> HTML to define the content of web pages</li>
+                     <li> CSS to specify the layout of web pages</li>
+                     <li>JavaScript to program the behavior of web pages</li>
+                </ul>
 
+                <h4>The &lt;script&gt; Tag</h4>
+                In HTML, JavaScript code must be inserted between &lt;script&gt; and &lt;/script&gt; tags.
+                <code> <h5>Example</h5>
+                    &lt;script&gt;<br/>
+                    document.getElementById("demo").innerHTML = "My First JavaScript";<br/>
+                    &lt;/script&gt;<br/>                        
+                </code>
+
+                <p class="note">Note: </p>
             </article>
         </section>
+
+        <section class="main-section" id="js-parts">
+            <article>
+                <header><h2>JavaScript Essential parts</h2></header> 
+                A JavaScript function is a block of JavaScript code, that can be executed when "called" for.
+                For example, a function can be called when an event occurs, like when the user clicks a button.
+                You will learn much more about functions and events in later chapters.
+
+                <h4>JavaScript in &lt;head&gt; or &lt;body&gt;</h4>
+                You can place any number of scripts in an HTML document.
+                Scripts can be placed in the &lt;body&gt;, or in the &lt;head&gt; section of an HTML page, or in both.
+                
+                <h4>External JavaScript</h4>
+                Scripts can also be placed in external files.
+                External scripts are practical when the same code is used in many different web pages.
+                JavaScript files have the file extension .js.
+                To use an external script, put the name of the script file in the src (source) attribute of a &lt;script&gt; tag:
+
+                <code> <h5>Example</h5>
+                    &lt;script src="myScript.js"&gt;&lt;/script&gt;               
+                </code>
+            </article>
+        
+            <article>
+                <h4>JavaScript Output</h4>
+                JavaScript can "display" data in different ways:<br/>
+                Writing into an HTML element, using innerHTML.
+                <ul>
+                	<li>Writing into the HTML output using document.write().</li>
+                	<li>Writing into an alert box, using window.alert().</li>
+                	<li>Writing into the browser console, using console.log().</li>
+                </ul>
+            </article>
+            <article>
+                <h4>JavaScript Statements</h4>
+                JavaScript statements are composed of:
+                Values, Operators, Expressions, Keywords, and Comments.
+                Semicolons separate JavaScript statements.
+                Add a semicolon at the end of each executable statement.
+
+                <code> <h5>Example</h5>
+                    var x, y, z;    // Statement 1
+                    x = 5;          // Statement 2
+                    y = 6;          // Statement 3
+                    z = x + y;      // Statement 4
+                </code>
+
+                When separated by semicolons, multiple statements on one line are allowed:
+                <code> <h5>Example</h5>
+                    a = 5; b = 6; c = a + b;
+                </code>
+            </article>
+
+            <article>
+                <h4>JavaScript Syntax</h4>
+                JavaScript syntax is the set of rules, how JavaScript programs are constructed:
+                <code> <h5>Example</h5>
+                    var x, y;          // How to declare variables
+                    x = 5; y = 6;      // How to assign values
+                    z = x + y;         // How to compute values
+                </code>
+            </article>
+
+            <article>
+                <h4>JavaScript Identifiers</h4>
+                <p>
+                    Identifiers are names.
+                    In JavaScript, identifiers are used to name variables (and keywords, and functions, and labels).
+                    The rules for legal names are much the same in most programming languages.
+                    In JavaScript, the first character must be a letter, or an underscore (_), or a dollar sign ($).
+                    Subsequent characters may be letters, digits, underscores, or dollar signs.
+                </p>
+            </article>
+
+            <article>
+                <h4>JavaScript Comments</h4>
+                    JavaScript comments can be used to explain JavaScript code, and to make it more readable.
+                    JavaScript comments can also be used to prevent execution, when testing alternative code.
+                <h4>Single Line Comments</h4>
+                <p>
+                    Single line comments start with //.
+                    Any text between // and the end of the line will be ignored by JavaScript (will not be executed).
+                </p>
+
+                <h4>Multi-line Comments</h4>
+                <p>
+                    Multi-line comments start with /* and end with */.
+                    Any text between /* and */ will be ignored by JavaScript.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="js-variables">
+            <h2>JavaScript Variables & Data types</h2>
+            <article>
+                <h4>Variables</h4>
+                JavaScript variables are containers for storing data values.
+
+                <code> <h5>Example</h5>
+                    var x = 5;
+                    var y = 6;
+                    var z = x + y;
+                </code>
+                From the example above, you can expect:
+                <ul>
+                	<li>x stores the value 5</li>
+                	<li>y stores the value 6</li>
+                	<li>z stores the value 11</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>JavaScript Identifiers</h4>
+                <p>
+                    All JavaScript variables must be identified with unique names.<br/>
+                    These unique names are called identifiers.<br/>
+                    Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).<br/>
+                    The general rules for constructing names for variables (unique identifiers) are:<br/>   
+                </p>
+                <ul>
+                    <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+                    <li>Names must begin with a letter</li>
+                    <li>Names can also begin with $ and _ (but we will not use it in this tutorial)</li>
+                    <li>Names are case sensitive (y and Y are different variables)</li>
+                    <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>JavaScript Data Types</h4>
+                <p>
+                    JavaScript variables can hold numbers like 100 and text values like "John Doe".<br/>
+                    In programming, text values are called text strings.<br/>
+                    JavaScript can handle many types of data, but for now, just think of numbers and strings.<br/>
+                    Strings are written inside double or single quotes. Numbers are written without quotes.<br/>
+                </p>
+                <code> <h5>Example</h5>
+                    var pi = 3.14;
+                    var person = "John Doe";
+                    var answer = 'Yes I am!';                    
+                </code>
+
+                <h4>One Statement, Many Variables</h4>
+                <p>
+                        You can declare many variables in one statement.
+                        Start the statement with var and separate the variables by comma:                        
+                </p>
+                <code> <h5>Example</h5>
+                    var person = "John Doe", carName = "Volvo", price = 200;                   
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="js-operators">
+            <h2>JavaScript Operators</h2>
+
+            <article>
+                <h4>Assignment</h4>
+                <p>The assignment operator (=) assigns a value to a variable.</p>
+                <code><h5>Example</h5>
+                    var x = 10;
+                </code>
+            </article>
+
+            <article>
+                <h4>Adding</h4>
+                <p>The addition operator (+) adds numbers:</p>
+                <code><h5>Example</h5>
+                    var x = 5;
+                    var y = 2;
+                    var z = x + y;
+                </code>
+            </article>
+
+            <article>
+                <h4>Multiplying</h4>
+                <p>The multiplication operator (*) multiplies numbers.</p>
+                <code><h5>Example</h5>
+                    var x = 5;
+                    var y = 2;
+                    var z = x * y;                    
+                </code>
+            </article>
+
+            <article>
+                <h4>JavaScript Arithmetic Operators</h4>
+                <table border="1">
+                    <tr>
+                        <td>Operator</td><td>Description</td>
+                    </tr>
+                    <tr>
+                        <td>+</td><td>Addition</td>
+                    </tr>
+                    <tr>
+                        <td>-</td><td>Subtraction</td>
+                    </tr>
+                    <tr>
+                        <td>*</td><td>Multiplication</td>
+                    </tr>
+                    <tr>
+                        <td>/</td><td>Division</td>
+                    </tr>
+                    <tr>
+                        <td>%</td><td>Modulus (Division Remainder)</td>
+                    </tr>
+                    <tr>
+                        <td>++</td><td>Increment</td>
+                    </tr>
+                    <tr>
+                        <td>--</td><td>Decrement</td>
+                    </tr>
+                </table>
+            </article>
+
+            <article>
+                <h4>JavaScript Assignment Operators</h4>
+                <p>Assignment operators assign values to JavaScript variables.</p>
+                <table border="1">
+                    <tr>
+                        <td>Operator</td><td>Example</td><td>Same as</td>
+                    </tr>
+                    <tr>
+                        <td>=</td><td>x=y</td><td>x=y</td>
+                    </tr>
+                    <tr>
+                        <td>+=</td><td>x+=y</td><td>x=x+y</td>
+                    </tr>
+                    <tr>
+                        <td>-=</td><td>x-=y</td><td>x=x-y</td>
+                    </tr>
+                    <tr>
+                        <td>*=</td><td>x*=y</td><td>x=x*y</td>
+                    </tr>
+                    <tr>
+                        <td>/=</td><td>x/=y</td><td>x=x/y</td>
+                    </tr>
+                    <tr>
+                        <td>%=</td><td>x%=y</td><td>x=x%y</td>
+                    </tr>
+                </table>
+            </article>
+
+            <article>
+                <h4>JavaScript String Operators</h4>
+                <p>The + operator can also be used to add (concatenate) strings.</p>
+                <code><h5>Example</h5>
+                    var txt1 = "John";
+                    var txt2 = "Doe";
+                    var txt3 = txt1 + " " + txt2;                                       
+                </code>
+                <p class="note">
+                    The result of txt3 will be:
+                        John Doe
+                </p>
+
+                <p class="par">The += assignment operator can also be used to add (concatenate) strings:</p>
+                <code><h5>Example</h5>
+                    var txt1 = "What a very ";
+                    txt1 += "nice day";                                                          
+                </code>
+                <p class="note">
+                        The result of txt1 will be:
+                        What a very nice day                        
+                </p>
+
+                <h4>Adding Strings and Numbers</h4>
+                <p>Adding two numbers, will return the sum, but adding a number and a string will return a string:</p>
+                <code><h5>Example</h5>
+                    var x = 5 + 5;
+                    var y = "5" + 5;
+                    var z = "Hello" + 5;                                                                             
+                </code>
+            </article>
+        </section>
+
     </main>
         <script src="main.js"></script>
 </body>
