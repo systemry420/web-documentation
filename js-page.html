@@ -271,6 +271,11 @@
                         <td>--</td><td>Decrement</td>
                     </tr>
                 </table>
+                <div class="reference">
+                    <a href="https://www.w3schools.com/js/js_arithmetic.asp">
+                        Want to learn more?
+                    </a>
+                </div>
             </article>
 
             <article>
@@ -331,6 +336,173 @@
                     var y = "5" + 5;
                     var z = "Hello" + 5;                                                                             
                 </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="js-data">
+            <h2>JavaScript Data Types</h2>
+
+            <article>
+                <p>JavaScript variables can hold many data types: numbers, strings, objects and more.
+                    To be able to operate on variables, it is important to know something about the type.
+                <br/>
+                JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
+                </p>
+                <code><h5>Example</h5>
+                    var x;           // Now x is undefined
+                    x = 5;           // Now x is a Number
+                    x = "John";      // Now x is a String
+                </code>
+            </article>
+
+            <article>
+                <h4>JavaScript Strings</h4>
+                <p>A string (or a text string) is a series of characters like "John Doe".</p>
+                <code><h5>Example</h5>
+                    var carName = "Volvo XC60";   // Using double quotes
+                    var carName = 'Volvo XC60';   // Using single quotes
+                </code>
+            </article>
+
+            <article>
+                <h4>JavaScript Numbers</h4>
+                <p>JavaScript has only one type of numbers.</p>
+                <code><h5>Example</h5>
+                    var x1 = 34.00;     // Written with decimals
+                    var x2 = 34;        // Written without decimals
+                </code>
+            </article>
+
+            <article>
+                <h4>JavaScript Booleans</h4>
+                <p>Booleans can only have two values: true or false.</p>
+                <code><h5>Example</h5>
+                    var x = 5;
+                    var y = 5;
+                    var z = 6;
+                    (x == y)       // Returns true
+                    (x == z)       // Returns false
+                </code>
+            </article>
+
+            <article>
+                <h4>JavaScript Arrays</h4>
+                <p>JavaScript arrays are written with square brackets.
+                    Array items are separated by commas.	
+                </p>
+                <code><h5>Example</h5> var cars = ["Saab", "Volvo", "BMW"];</code>
+            </article>
+
+            <article>
+                <h4>JavaScript Objects</h4>
+                <p>JavaScript objects are written with curly braces.
+                    Object properties are written as name:value pairs, separated by commas.
+                </p>
+                <code><h5>Example</h5>
+                    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="js-ifelse">
+            <h2>JavaScript Conditionals</h2>
+            <article>
+                <p>
+                    Very often when you write code, you want to perform different actions for different decisions.
+
+                    You can use conditional statements in your code to do this.
+
+                    In JavaScript we have the following conditional statements:
+                    <ul>
+                        <li>Use <strong>if</strong> to specify a block of code to be executed, if a specified condition is true</li>
+                        <li>Use <strong>else</strong> to specify a block of code to be executed, if the same condition is false</li>
+                        <li>Use <strong>else if</strong> to specify a new condition to test, if the first condition is false</li>
+                        <li>Use <strong>switch</strong> to specify many alternative blocks of code to be executed</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article>
+                <h4>The if Statement</h4>
+                <p>Use the if statement to specify a block of JavaScript code to be executed if a condition is true.</p>
+                <code><h5>Example
+                        Make a "Good day" greeting if the hour is less than 18:00:
+                        </h5>                        
+                        if (hour < 18) {
+                        &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good day";
+                        }
+                </code>
+            </article>
+
+            <article>
+                <h4>The else Statement</h4>
+                <p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+                <code><h5>Example
+                        If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":
+                        </h5>                        
+                        if (hour < 18) {
+                            &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good day";
+                        } else {
+                            &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good evening";
+                        }
+                </code>
+            </article>
+
+            <article>
+                <h4>The else if Statement</h4>
+                <p>Use the else if statement to specify a new condition if the first condition is false.</p>
+                <code><h5>
+                        Example
+                        If time is less than 10:00, create a "Good morning" greeting, if not, but time is less than 20:00, create a "Good day" greeting, otherwise a "Good evening":
+                        </h5>
+                        if (time < 10) {
+                            &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good morning";
+                        } else if (time < 20) {
+                            &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good day";
+                        } else {
+                            &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good evening";
+                        }
+                </code>
+            </article>
+
+            <article>
+                <h4>JavaScript Switch Statement</h4>
+                <p>The switch statement is used to perform different actions based on different conditions.</p>
+                This is how it works:
+                <ul>
+                    <li>The switch expression is evaluated once.</li>
+                    <li>The value of the expression is compared with the values of each case.</li>
+                    <li>If there is a match, the associated block of code is executed.</li>
+                </ul>
+                <code><h5>Example</h5>
+                        switch (new Date().getDay()) {
+                            &nbsp;&nbsp;case 0:
+                            &nbsp;&nbsp;&nbsp;&nbsp;day = "Sunday";
+                            &nbsp;&nbsp;&nbsp;&nbsp;break;
+                            &nbsp;&nbsp;case 1:
+                            &nbsp;&nbsp;&nbsp;&nbsp;day = "Monday";
+                            &nbsp;&nbsp;&nbsp;&nbsp;break;
+                            &nbsp;&nbsp;case 2:
+                            &nbsp;&nbsp;&nbsp;&nbsp;day = "Tuesday";
+                            &nbsp;&nbsp;&nbsp;&nbsp;break;
+                            &nbsp;&nbsp;case 3:
+                            &nbsp;&nbsp;&nbsp;&nbsp;day = "Wednesday";
+                            &nbsp;&nbsp;&nbsp;&nbsp;break;
+                            &nbsp;&nbsp;case 4:
+                            &nbsp;&nbsp;&nbsp;&nbsp;day = "Thursday";
+                            &nbsp;&nbsp;&nbsp;&nbsp;break;
+                            &nbsp;&nbsp;case 5:
+                            &nbsp;&nbsp;&nbsp;&nbsp;day = "Friday";
+                            &nbsp;&nbsp;&nbsp;&nbsp;break;
+                            &nbsp;&nbsp;case 6:
+                            &nbsp;&nbsp;&nbsp;&nbsp;day = "Saturday";
+                        }
+                </code>
+                <h4>The break Keyword</h4>
+                <p>When JavaScript reaches a break keyword, it breaks out of the switch block.</p>
+                <h4>The default Keyword</h4>
+                <p>The default keyword specifies the code to run if there is no case match:</p>
+                
             </article>
         </section>
 
