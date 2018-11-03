@@ -2,8 +2,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/*****
+    ** home styling **
+******/
+
+.level{
+    display: block;
+    height: 450px;
+    text-align: center;
+    padding-top: 30%;
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+#beginner{
+
+}
+
+#intermediate{
+    background-color: teal;
+}
+
+#advanced{
+    background-color: rgba(128, 0, 0, 0.856);
+}
+
+/*****
+    ** page styling
+*****/
 
 #navbar{
     background: rgb(0, 128, 107);
@@ -80,15 +109,15 @@ nav#aside{
 
 .splash{
     background-color: #aaa;
-    width: 40%;
+    width: 60vw;
     height: 30vh;
     position: relative;
     top:20px;
     margin: auto;
     text-align: center;
-    transform: scale(1.2);
+    transform: scale(1.3);
     transition: ease-in;
-    transition-duration: 1s;
+    transition-duration: 2s;
 }
 
 #main-doc{
