@@ -31,6 +31,18 @@
             <a class="nav-link" href="#js-operators">
                 <li>JS Operators</li>
             </a>
+            <a class="nav-link" href="#js-data">
+                <li>JS Data types</li>
+            </a>
+            <a class="nav-link" href="#js-ifelse">
+                <li>JS Conditionals</li>
+            </a>
+            <a class="nav-link" href="#js-loop">
+                <li>JS Loops</li>
+            </a>
+            <a class="nav-link" href="#js-break">
+                <li>JS break & continue</li>
+            </a>
         </ul>
     </nav>
     
@@ -38,14 +50,15 @@
         <section class="splash" id="js-splash" style="background-color: rgba(235, 199, 43, 0.897);">
             js logo
         </section>
+
         <section class="main-section" id="js-intro">
             <article>
                 <header><h2>Introduction</h2></header> 
                 JavaScript is one of the 3 languages all web developers must learn:  
                 <ul>
                     <li> HTML to define the content of web pages</li>
-                     <li> CSS to specify the layout of web pages</li>
-                     <li>JavaScript to program the behavior of web pages</li>
+                    <li> CSS to specify the layout of web pages</li>
+                    <li>JavaScript to program the behavior of web pages</li>
                 </ul>
 
                 <h4>The &lt;script&gt; Tag</h4>
@@ -502,10 +515,107 @@
                 <p>When JavaScript reaches a break keyword, it breaks out of the switch block.</p>
                 <h4>The default Keyword</h4>
                 <p>The default keyword specifies the code to run if there is no case match:</p>
-                
+
             </article>
         </section>
 
+        <section class="main-section" id="js-loop">
+            <h2>JavaScript For Loop</h2>
+            <article>
+                <p>Loops can execute a block of code a number of times.</p>
+                <p>Loops are handy, if you want to run the same code over and over again, each time with a different value, for example, to display numbers from 1 to 10.</p>
+
+                <h4>Different Kinds of Loops</h4>
+                <ul>
+                    <li>for - loops through a block of code a number of times</li>
+                    <li>for/in - loops through the properties of an object</li>
+                    <li>while - loops through a block of code while a specified condition is true</li>
+                    <li>do/while - also loops through a block of code while a specified condition is true</li>
+                </ul>
+
+                <h4>The For Loop</h4>
+                <code><h5>Example</h5>
+                    for (i = 0; i &lt; 5; i++) {
+                        &nbsp;&nbsp;text += "The number is " + i;
+                    }                  
+                </code>
+                <p>Normally you will use statement 1 to initialize the variable used in the loop (i = 0).</p>
+                <p>Often statement 2 is used to evaluate the condition of the initial variable.
+                    If statement 2 returns true, the loop will start over again, if it returns false, the loop will end.
+                </p>
+                <p>Often statement 3 increments the value of the initial variable.</p>
+                <P>Statement 3 can do anything like negative increment (i--), positive increment (i = i + 15), or anything else.</P>
+            </article>
+
+            <article>
+                <h4>The For/In Loop</h4>
+                <p>The JavaScript for/in statement loops through the properties of an object:</p>
+                <code><h5>Example</h5>
+                    var person = {fname:"John", lname:"Doe", age:25}; 
+
+                    var text = "";
+                    var x;
+                    for (x in person) {
+                        &nbsp;&nbsp;text += person[x];
+                    }
+                </code>
+            </article>
+
+            <article>
+                <h4>JavaScript While Loop</h4>
+                <p>Loops can execute a block of code as long as a specified condition is true.</p>
+                <p>The while loop loops through a block of code as long as a specified condition is true.</p>
+                <p>In the following example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10:</p>
+                <code><h5>Example</h5>
+                    while (i &lt; 10) {
+                        &nbsp;&nbsp;text += "The number is " + i;
+                        &nbsp;&nbsp;i++;
+                    }                
+                </code>
+            </article>
+
+            <article>
+                <h4>The Do/While Loop</h4>
+                <p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+                <code><h5>Example</h5>
+                    do {
+                        &nbsp;&nbsp;text += "The number is " + i;
+                        &nbsp;&nbsp;i++;
+                    }
+                    while (i &lt; 10);
+                </code>
+                <p class="note">Do not forget to increase the variable used in the condition, otherwise the loop will never end!</p>
+            </article>
+        </section>
+        
+        <section class="main-section" id="js-break">
+            <h2>JavaScript Break and Continue</h2>
+
+            <article>
+                <h4>The Break Statement</h4>
+                <p>The break statement can also be used to jump out of a loop.  
+                    The break statement breaks the loop and continues executing the code after the loop 
+                </p>
+                <code>
+                    for (i = 0; i &lt; 10; i++) {
+                        &nbsp;&nbsp;if (i === 3) 
+                        &nbsp;&nbsp;&nbsp;&nbsp;break;
+                    }
+                </code>
+            </article>
+
+            <article>
+                <h4>The Continue Statement</h4>
+                <p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+                <code>
+                    for (i = 0; i &lt; 10; i++) {
+                        &nbsp;&nbsp;if (i === 3)
+                        &nbsp;&nbsp;&nbsp;&nbsp;continue;
+                        &nbsp;&nbsp;console.log(i);
+                    }
+                </code>
+            </article>
+        </section>
     </main>
         <script src="main.js"></script>
 </body>
