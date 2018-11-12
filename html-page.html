@@ -17,19 +17,289 @@
         </nav>
 
     <aside>
-            <header><h2>HTML Parts</h2></header>
         <nav id="aside">
+                <h3>HTML Main Parts</h3>
             <ul>
                 <a class="nav-link" href="#html-intro">
-                    <li>Introduction</li>
+                    <li>Introduction to HTML</li>
+                </a>
+                <a class="nav-link" href="#html-attributes">
+                    <li>HTML Attributes</li>
+                </a>
+                <a class="nav-link" href="#html-headings">
+                    <li>HTML Headings</li>
+                </a>
+                <a class="nav-link" href="#html-paragraphs">
+                    <li>HTML Paragraphs</li>
+                </a>
+                <a class="nav-link" href="#html-style">
+                    <li>HTML Style Attribute</li>
+                </a>
+                <a class="nav-link" href="#html-text">
+                    <li>HTML Text Formating</li>
                 </a>
         </nav>
     </aside>
 
     <main id="main-doc">
-        <section class="main-section" id="">
-            <article>
+        <section class="splash" id="js-splash" style="background-color: rgba(235, 81, 43, 0.89);">
+                html logo
+        </section>
 
+        <section class="main-section" id="html-intro">
+            <article>
+                <h2>Introduction</h2>
+                <p>With HTML you can create your own Website.</p>
+                <ul>
+                    <li>HTML describes the structure of Web pages using markup</li>
+                    <li>HTML elements are the building blocks of HTML pages</li>
+                    <li>HTML elements are represented by tags</li>
+                    <li>HTML tags label pieces of content such as "heading", "paragraph", "table", and so on</li>
+                    <li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>A Simple HTML Document</h4>
+                <code>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;head&gt;
+                    &lt;title&gt;Page Title&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h1&gt;My First Heading&lt;/h1&gt;
+                    &lt;p&gt;My first paragraph.&lt;/p&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+                <h5>Example Explained</h5>
+                <ul>
+                    <li>The &lt;!DOCTYPE html&gt; declaration defines this document to be HTML5</li>
+                    <li>The &lt;html&gt; element is the root element of an HTML page</li>
+                    <li>The &lt;head&gt; element contains meta information about the document</li>
+                    <li>The &lt;title&gt; element specifies a title for the document</li>
+                    <li>The &lt;body&gt; element contains the visible page content</li>
+                    <li>The &lt;h1&gt; element defines a large heading</li>
+                    <li>The &lt;p&gt; element defines a paragraph</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>HTML Tags</h4>
+                <p>HTML tags are element names surrounded by angle brackets:</p>
+                <code>&lt;tagname&gt;content goes here...&lt;/tagname&gt;</code>
+                <ul>
+                    <li>HTML tags normally come in pairs like &lt;p&gt; and &lt;/p&gt;</li>
+                    <li>The first tag in a pair is the start tag, the second tag is the end tag</li>
+                    <li>The end tag is written like the start tag, but with a forward slash inserted before the tag name</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>HTML Links</h4>
+                <p>HTML links are defined with the &lt;a&gt; tag:</p>
+                <code>
+                    &lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;
+                </code>
+            </article>
+
+            <article>
+                <h4>HTML Images</h4>
+                <p>HTML images are defined with the &lt;img&gt; tag.</p>
+                <p>The source file (src), alternative text (alt), width, and height are provided as attributes:</p>
+                <code>
+                        &lt;img src="w3schools.jpg" alt="W3Schools.com" width="104"height="142"&gt;
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="html-attributes">
+            <article>
+                <h4>HTML Attributes</h4>
+                <ul>
+                    <li>All HTML elements can have attributes</li>
+                    <li>Attributes provide additional information about an element</li>
+                    <li>Attributes are always specified in the start tag</li>
+                    <li>Attributes usually come in name/value pairs like: name="value"</li>
+                </ul>
+            </article>
+            
+            <article>
+                <h4>The href Attribute</h4>
+                <p>HTML links are defined with the &lt;a&gt; tag. The link address is specified in the href attribute:</p>
+                <code>&lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;</code>
+            </article>
+
+            <article>
+                <h4>The src Attribute</h4>
+                <p>HTML images are defined with the &lt;img&gt; tag.</p>
+                <p>The filename of the image source is specified in the src attribute:</p>
+                <code>&lt;img src="img_girl.jpg"&gt;</code>
+            </article>
+
+            <article>
+                <h4>The width and height Attributes</h4>
+                <p>Images in HTML have a set of size attributes, which specifies the width and height of the image:</p>
+                <code>&lt;img src="img_girl.jpg" width="500" height="600"&gt;</code>
+                <p class="note">The image size is specified in pixels: width="500" means 500 pixels wide.</p>
+            </article>
+
+            <article>
+                <h4>The style Attribute</h4>
+                <p>The style attribute is used to specify the styling of an element, like color, font, size etc.</p>
+                <code>&lt;p style="color:red"&gt;I am a paragraph&lt;/p&gt;</code>
+                <p class="note">Using quotes are the most common. Omitting quotes can produce errors. 
+                        <br>At W3Schools we always use quotes around attribute values.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="html-headings">
+            <h2>HTML Headings</h2>
+            <article>
+                <p>Headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags.</p>
+                <p>&lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the least important heading.</p>
+                <code>
+                    &lt;h1&gt;Heading 1&lt;/h1&gt;
+                    &lt;h2&gt;Heading 2&lt;/h2&gt;
+                    &lt;h3&gt;Heading 3&lt;/h3&gt;
+                    &lt;h4&gt;Heading 4&lt;/h4&gt;
+                    &lt;h5&gt;Heading 5&lt;/h5&gt;
+                    &lt;h6&gt;Heading 6&lt;/h6&gt;                    
+                </code>
+
+                <h4>HTML Horizontal Rules</h4>
+                <p>The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+
+            </article>
+
+            <article>
+                <h4>The HTML &lt;head&gt; Element</h4>
+                <p>The HTML &lt;head&gt; element has nothing to do with HTML headings.</p>
+                <p>The &lt;head&gt; element is a container for metadata. HTML metadata is data about the HTML document. Metadata is not displayed.</p>
+                <p>The &lt;head&gt; element is placed between the &lt;html&gt; tag and the &lt;body&gt; tag:</p>
+                <code>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    
+                    &lt;head&gt;
+                        &lt;title&gt;My First HTML&lt;/title&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                    &lt;/head&gt;
+                    
+                    &lt;body&gt;                        
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="html-paragraphs">
+            <article>
+                <h2>HTML Paragraphs</h2>
+                <p>The HTML &lt;p&gt; element defines a paragraph:</p>
+                <code>
+                    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                    &lt;p&gt;This is another paragraph.&lt;/p&gt;                        
+                </code>
+            </article>
+
+            <article>
+                <h4>HTML Line Breaks</h4>
+                <p>The HTML &lt;br&gt; element defines a line break.</p>
+                <p>Use &lt;br&gt; if you want a line break (a new line) without starting a new paragraph:</p>
+                <code>&lt;p&gt;This is&lt;br&gt;a paragraph&lt;br&gt;with line breaks.&lt;/p&gt;</code>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="html-style">
+            <article>
+                <h4>HTML Styles Attribute</h4>
+                <p>Setting the style of an HTML element, can be done with the style attribute.</p>
+                <p>The HTML style attribute has the following syntax:</p>
+                <code>
+                        &lt;tagname style="property:value;"&gt;
+                </code>
+                <p class="note">The property is a CSS property. The value is a CSS value.</p>
+
+            </article>
+
+            <article>
+                <h4>HTML Background Color</h4>
+                <p>The background-color property defines the background color for an HTML element.</p>
+                <p>This example sets the background color for a page to powderblue:</p>
+                <code>
+                    &lt;body style="background-color:powderblue;"&gt;
+
+                    &lt;h1&gt;This is a heading&lt;/h1&gt;
+                    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                    
+                    &lt;/body&gt;                        
+                </code>
+            </article>
+
+            <article>
+                <h4>HTML Text Color</h4>
+                <p>The color property defines the text color for an HTML element:</p>
+                <code>
+                    &lt;h1 style="color:blue;"&gt;This is a heading&lt;/h1&gt;
+                    &lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;                        
+                </code>
+            </article>
+
+            <article>
+                <h1>HTML Text Size</h1>
+                <p>The font-size property defines the text size for an HTML element:</p>
+                <code>
+                        &lt;h1 style="font-size:300%;"&gt;This is a heading&lt;/h1&gt;
+                        &lt;p style="font-size:160%;"&gt;This is a paragraph.&lt;/p&gt;                        
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="html-text">
+            <article>
+                <h2>HTML Text Formatting</h2>
+                <p>HTML also defines special elements for defining text with a special meaning.</p>
+                <p>Formatting elements were designed to display special types of text:</p>
+                <ul>
+                    <li>&lt;b&gt; - Bold text</li>
+                    <li>&lt;strong&gt; - Important text</li>
+                    <li>&lt;i&gt; - Italic text</li>
+                    <li>&lt;em&gt; - Emphasized text</li>
+                    <li>&lt;mark&gt; - Marked text</li>
+                    <li>&lt;small&gt; - Small text</li>
+                    <li>&lt;del&gt; - Deleted text</li>
+                    <li>&lt;ins&gt; - Inserted text</li>
+                    <li>&lt;sub&gt; - Subscript text</li>
+                    <li>&lt;sup&gt; - Superscript text</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>HTML &lt;strong&gt; Elements</h4>
+                <p>The HTML &lt;strong&gt; element defines bold text, with extra importance.</p>
+                <code>&lt;strong&gt;This text is bold&lt;/strong&gt;</code>
+            </article>
+
+            <article>
+                <h4>HTML &lt;em&gt; Elements</h4>
+                <p>The HTML &lt;em&gt; element defines emphasized text, with added semantic importance.</p>
+                <code>&lt;em&gt;This text is emphasized&lt;/em&gt;</code>
+            </article>
+
+            <article>
+                <h4>HTML &lt;sub&gt; Element</h4>
+                <p>The HTML &lt;sub&gt; element defines subscripted text.</p>
+                <code>&lt;p&gt;This is &lt;sub&gt;subscripted&lt;/sub&gt; text.&lt;/p&gt;</code>
+            </article>
+
+            <article>
+                <h4>HTML &lt;sup&gt; Element</h4>
+                <p>The HTML &lt;sup&gt; element defines superscripted text.</p>
+                <code>&lt;p&gt;This is &lt;sup&gt;superscripted&lt;/sup&gt; text.&lt;/p&gt;</code>
             </article>
         </section>
     </main>
