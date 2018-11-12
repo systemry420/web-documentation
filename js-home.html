@@ -6,7 +6,7 @@
     <title>JavaScript Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="app.css" />
-    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" async></script>
 </head>
 <body>
     <nav id="navbar">
@@ -17,13 +17,33 @@
             </ul>
     </nav>
     <section class="level" id="beginner">
-        JavaScript for Beginner Learners
+        <h1>JavaScript for Beginner Learners</h1>
     </section>
     <section class="level" id="intermediate">
-        JavaScript for Intermediate Learners
+        <h1>JavaScript for Intermediate Learners</h1>
     </section>
     <section class="level" id="advanced">
-        JavaScript for Advanced Learners
+        <h1>JavaScript for Advanced Learners</h1>
     </section>
 </body>
+
+<script>
+    $(function(){
+
+        $(".level h1").mouseover(function(){
+            $(this).animate({
+                opacity: 1,
+                'font-size': '32px'
+            }, "slow");
+        });
+        
+        $(".level h1").mouseleave(function(){
+            $(this).animate({
+                opacity: 0.7, 
+                'font-size': '28px'
+            }, "fast");
+        });           
+    });
+
+</script>
 </html>

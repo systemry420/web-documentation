@@ -43,6 +43,18 @@
             <a class="nav-link" href="#js-break">
                 <li>JS break & continue</li>
             </a>
+            <a class="nav-link" href="#js-functions">
+                <li>JS Functions</li>
+            </a>
+            <a class="nav-link" href="#js-arrays">
+                <li>JS Arrays</li>
+            </a>
+            <a class="nav-link" href="#js-arraymethods">
+                <li>JS Array Methods</li>
+            </a>
+            <a class="nav-link" href="#js-arrayiteration">
+                <li>JS Array Iteration Methods</li>
+            </a>
         </ul>
     </nav>
     
@@ -613,6 +625,253 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;continue;
                         &nbsp;&nbsp;console.log(i);
                     }
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="js-functions">
+            <h2>JavaScript Functions</h2>
+            <article>
+                <p>A JavaScript function is a block of code designed to perform a particular task.
+                        <br><br>
+                        A JavaScript function is executed when "something" invokes it (calls it).
+                </p>
+                <h4>Syntax</h4>
+                <code>
+                    function myFunction(p1, p2) {
+                        &nbsp;&nbsp;&nbsp;&nbsp;return p1 * p2;              // The function returns the product of p1 and p2
+                    }
+                </code>
+                <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
+                <p>The parentheses may include parameter names separated by commas:
+                        (parameter1, parameter2, ...)</p>
+            </article>
+
+            <article>
+                <h4>Function Invocation</h4>
+                <p>The code inside the function will execute when "something" invokes (calls) the function:</p>
+                <ul>
+                    <li>When an event occurs (when a user clicks a button)</li>
+                    <li>When it is invoked (called) from JavaScript code</li>
+                    <li>Automatically (self invoked)</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Example of simple function</h4>
+                <p>The sum() function receives 2 arguments, add them and logs the result</p>
+                <code><h5>Example</h5>
+                    function sum(a, b){
+                        &nbsp;&nbsp;&nbsp;&nbsp; var s = a + b;
+                        &nbsp;&nbsp;&nbsp;&nbsp; console.log(s);
+                    }
+
+                    sum(3,4);
+                </code>
+            </article>
+            <article>
+                <h4>Why Functions? </h4>
+                <p>You can reuse code: Define the code once, and use it many times.</p>
+                <p>You can use the same code many times with different arguments, to produce different results.</p>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="js-array">
+            <h2>JavaScript Arrays</h2>
+            <article>
+                <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+                <code><h5>Example</h5>
+                    var cars = ["Saab", "Volvo", "BMW"];
+                </code>
+                <p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
+                <code><h5>Example</h5>
+                    var cars = [
+                    &nbsp;&nbsp;"Saab",
+                    &nbsp;&nbsp;"Volvo",
+                    &nbsp;&nbsp;"BMW"
+                    ];
+                </code>
+            </article>
+
+            <article>
+                <h4>Access the Elements of an Array</h4>
+                <p>You access an array element by referring to the index number.
+                    <br>This statement accesses the value of the first element in cars:</p>
+                <code>
+                        var name = cars[0];
+                </code>
+                <p class="note">
+                        Array indexes start with 0. <br>
+                        [0] is the first element. [1] is the second element.
+                </p>
+            </article>
+
+            <article>
+                <h4>Changing an Array Element</h4>
+                <p>This statement changes the value of the first element in cars:</p>
+                <code>cars[0] = "Opel";</code>
+            </article>
+
+            <article>
+                <h4>Array Properties and Methods</h4>
+                <p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
+                <code>
+                        var x = cars.length;   // length property returns the number of elements
+                        var y = cars.sort();   // The sort() method sorts arrays
+                </code>
+            </article>
+
+            <article>
+                <h4>Looping Array Elements</h4>
+                <p>The safest way to loop through an array, is using a "for" loop:</p>
+                <code>
+                    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    fLen = fruits.length;
+                    
+                    for (i = 0; i < fLen; i++) {
+                        &nbsp;&nbsp;console.log(fruits[i]);
+                    }
+                </code>
+
+                <p>You can also use the Array.forEach() function:</p>
+                <code>
+                    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    
+                    fruits.forEach(myFunction);
+                    
+                    function myFunction(value) {
+                        &nbsp;&nbsp;console.log(value);
+                    }
+                </code>
+            </article>
+
+            <article>
+                <h4>Adding Array Elements</h4>
+                <code>
+                    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    fruits.push("Lemon"); // adds a new element (Lemon) to fruits
+                </code>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="js-arraymethods">
+            <h2>JavaScript Array Methods</h2>
+            <article>
+                <h4>Converting Arrays to Strings</h4>
+                <p>The join() method also joins all array elements into a string.</p>
+                <code>
+                    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    var s = fruits.join(" - ");
+                </code>
+                <p class="note">
+                        Banana * Orange * Apple * Mango
+                </p>
+            </article>
+
+            <article>
+                <h4>Popping and Pushing</h4>
+                <p>The pop() method removes the last element from an array:</p>
+                <code>
+                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                        fruits.pop(); // Removes the last element ("Mango") from fruits
+                </code>
+                <p class="note">The pop() method returns the value that was "popped out":</p>
+
+                <p>The push() method adds a new element to an array (at the end):</p>
+                <code>
+                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                        fruits.push("Kiwi");       //  Adds a new element ("Kiwi") to fruits
+                </code>
+                <p class="note">The push() method returns the new array length:</p>
+            </article>
+
+            <article>
+                <h4>Shifting Elements</h4>
+                <p>The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+                <code>
+                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                        fruits.shift(); // Removes the first element "Banana" from fruits                        
+                </code>
+                <p class="note">The shift() method returns the string that was "shifted out":</p>
+
+                <p>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:</p>
+                <code>
+                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                        fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits
+                </code>
+                <p class="note">The unshift() method returns the new array length.</p>
+
+            </article>
+
+            <article>
+                <h4>Sorting an Array</h4>
+                <p>The sort() method sorts an array alphabetically:</p>
+                <code>
+                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                        fruits.sort();        // Sorts the elements of fruits
+                </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="js-arrayiteration">
+            <h2>JavaScript Array Iteration Methods</h2>
+            <article>
+                <p>Array iteration methods operate on every array item.</p>
+                <h4>Array.forEach()</h4>
+                <p>The forEach() method calls a function (a callback function) once for each array element.</p>
+                <code>
+                    var numbers = [45, 4, 9, 16, 25];
+                    numbers.forEach(function(value){
+                        &nbsp;&nbsp;console.log(value);
+                    });
+                </code>
+            </article>
+
+            <article>
+                <h4>Array.map()</h4>
+                <p>The map() method creates a new array by performing a function on each array element.</p>
+                <p>The map() method does not change the original array.</p>
+                <p>This example multiplies each array value by 2:</p>
+                <code>
+                    var numbers1 = [45, 4, 9, 16, 25];
+                    var numbers2 = numbers1.map(myFunction);
+                    
+                    function myFunction(value, index, array) {
+                        &nbsp;&nbsp;return value * 2;
+                    }
+                </code>
+
+                <p class="note">We can write the same using inline anonymous function:</p>
+                <code>
+                    var numbers1 = [45, 4, 9, 16, 25];
+                    var numbers2 = numbers1.map(function(item){
+                        &nbsp;&nbsp;return item * 2;
+                    });
+                </code>
+            </article>
+
+            <article>
+                <h4>Array.filter()</h4>
+                <p>The filter() method creates a new array with array elements that passes a test.</p>
+                <p>This example creates a new array from elements with a value larger than 18:</p>
+                <code>
+                    var numbers = [45, 4, 9, 16, 25];
+                    var over18 = numbers.filter(myFunction);
+                    
+                    function myFunction(item) {
+                        &nbsp;&nbsp;return item > 18;
+                    }
+                </code>
+            </article>
+
+            <article>
+                <h4>Array.indexOf()</h4>
+                <p>Search an array for an element value and returns its position.</p>
+                <code>
+                    var fruits = ["Apple", "Orange", "Apple", "Mango"];
+                    var a = fruits.indexOf("Apple");
                 </code>
             </article>
         </section>

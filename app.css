@@ -13,11 +13,15 @@
     display: block;
     height: 450px;
     text-align: center;
-    padding-top: 30%;
-    font-size: 32px;
+    padding-top: 33vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
 }
 
+.level h1{
+    opacity: 0.7;
+    font-size: 28px;
+    font-family: inherit;
+}
 
 #intermediate{
     background-color: teal;
@@ -173,7 +177,7 @@ h2{
 }
 
 h5{
-    padding-bottom: 12px;
+    padding: 6px;
     border-bottom: 1px solid #aaa;
     letter-spacing: 1px;
 }
@@ -194,12 +198,12 @@ code{
     text-align: left;
     word-break: normal;
     word-wrap: break-word;
-    padding: 15px;
+    padding: 5px 15px;
     font-family: "Consolas", 'Courier New', Courier, monospace;
     font-size: 0.8em;
     border-left: 5px solid rgb(24, 95, 177);
     margin-bottom: 25px;
-    margin-top: 5px;
+    margin-top: 10px;
     border-radius: 5px;
     font-size: 0.98em;
     background: linear-gradient(to bottom, #eee 50%,#fff);
@@ -215,12 +219,12 @@ code{
 }
 
 .reference{
-    width: 50%;
+    width: 80%;
     height: 40px;
     display: block;
     background-color: #4CAF50;
     padding: 5px;
-    margin: 10px;
+    margin: 10px auto;
     text-align: center;
     text-decoration: none;
     box-shadow: 2px 2px 5px #aaa;
