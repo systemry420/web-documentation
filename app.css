@@ -5,9 +5,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*****
+/**************************************
     ** home styling **
-******/
+**************************************/
 
 .level{
     display: block;
@@ -31,15 +31,18 @@
     background-color: rgba(128, 0, 0, 0.856);
 }
 
-/*****
-    ** page styling
-*****/
+/**************************************
+    ** page styling **
+**************************************/
+
+/**************************************
+    ** navbar start **
+**************************************/
 
 #navbar{
     background: rgb(0, 128, 107);
     color: aliceblue;
     height: 60px;
-    width: 99vw;
     position: relative;
     top: 0;
     box-shadow: #999 4px 4px 3px;
@@ -50,7 +53,7 @@
     width:50vw;
     list-style: none;
     height: 100%;
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 #navbar ul li{
@@ -84,6 +87,13 @@ nav#aside{
     border-right: 2px solid #ddd;
 }
 
+/**************************************
+    ** navbar end **
+**************************************/
+
+/**************************************
+    ** aside start **
+**************************************/
 #aside h3{
     margin: 0 0 15px 0;
 }
@@ -106,27 +116,51 @@ nav#aside{
 .nav-link:hover, .nav-link:active{
     color: black;
 }
+/**************************************
+    ** aside end **
+**************************************/
 
-
+/**************************************
+    ** splash start **
+**************************************/
 .splash{
     background-color: #aaa;
     width: 60vw;
-    height: 30vh;
+    height: 200px;
     position: relative;
     top:20px;
     margin: auto;
     text-align: center;
-    transform: scale(1.3);
+    /* transform: scale(1.2);
     transition: ease-in;
-    transition-duration: 2s;
+    transition-duration: 2s; */
+    border-radius: 100px;
 }
 
+.splash img{
+    width: 180px;
+    animation: flash 2s ease-in 1s 1 reverse;
+}
+
+@keyframes flash{
+    0%{ width: 180px;}
+    50% {width: 210px;}
+    100% {width: 180px;}
+}
+
+/**************************************
+    ** splash end **
+**************************************/
+
+/**************************************
+    ** main start **
+**************************************/
 #main-doc{
     position: relative;
     top:20px;
     margin-left: 18%;
     height: auto;
-    width: 80vw;
+    width: 75vw;
     align-content: center;
     justify-content: center;
 }
@@ -147,9 +181,6 @@ nav#aside{
 
 .main-section article ul{
     margin:10px 40px;
-}
-.main-section article ul li{
-    padding:px;
 }
 
 .main-section article{
@@ -183,7 +214,7 @@ h5{
 }
 
 .snippet{
-    background: #ddd;
+    background: #eee;
     padding: 2px;
     color: maroon;
     font-weight: 600;
@@ -198,7 +229,7 @@ code{
     text-align: left;
     word-break: normal;
     word-wrap: break-word;
-    padding: 5px 15px;
+    padding: 1px 15px;
     font-family: "Consolas", 'Courier New', Courier, monospace;
     font-size: 0.8em;
     border-left: 5px solid rgb(24, 95, 177);
@@ -215,7 +246,9 @@ code{
     border: 1px solid orange;
     border-left: 5px solid orange;
     font-weight: 900;
-    font-size: .9em;
+    font-size: .8em;
+    color: rgb(187, 50, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .reference{
@@ -252,7 +285,30 @@ td{
     font-family: 'Courier New', Courier, monospace;
 }
 
+/**************************************
+    ** main end **
+**************************************/
+
+
+/**************************************
+    ** media query **
+**************************************/
 @media(max-width:1100px){
+
+    #main-doc{
+        font-size: 0.8em;
+        width: 100%;
+    }
+
+    .main-section article ul li{
+        margin-left:-20px;
+        margin-bottom: 10px;
+    }
+    
+    code{
+        line-height: 1.3em;
+    }
+
     #aside{
         display: none;
     }
@@ -266,5 +322,9 @@ td{
     
     #navbar ul li a{
         font-size: 1.2em;
+    }
+
+    .splash img{
+        width: 120px;
     }
 }
