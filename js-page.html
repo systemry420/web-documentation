@@ -64,8 +64,8 @@
         </section>
 
         <section class="main-section" id="js-intro">
+            <h2>Introduction</h2> 
             <article>
-                <h2>Introduction</h2> 
                 JavaScript is one of the 3 languages all web developers must learn:  
                 <ul>
                     <li> HTML to define the content of web pages</li>
@@ -74,7 +74,7 @@
                 </ul>
 
                 <h4>The &lt;script&gt; Tag</h4>
-                In HTML, JavaScript code must be inserted between &lt;script&gt; and &lt;/script&gt; tags.
+                In HTML, JavaScript code must be inserted between <span class="snippet">&lt;script&gt;</span> and <span class="snippet">&lt;/script&gt;</span> tags.
                 <code> <h5>Example</h5>
                     &lt;script&gt;
                     document.getElementById("demo").innerHTML = "My First JavaScript";
@@ -86,24 +86,23 @@
         </section>
 
         <section class="main-section" id="js-parts">
+            <h2>JavaScript Essential parts</h2> 
             <article>
-                <h2>JavaScript Essential parts</h2> 
                 A JavaScript function is a block of JavaScript code, that can be executed when "called" for.
                 For example, a function can be called when an event occurs, like when the user clicks a button.
                 You will learn much more about functions and events in later chapters.
 
                 <h4>JavaScript in &lt;head&gt; or &lt;body&gt;</h4>
-                You can place any number of scripts in an HTML document.
-                Scripts can be placed in the &lt;body&gt;, or in the &lt;head&gt; section of an HTML page, or in both.
+                <strong>You can place any number of scripts in an HTML document.
+                Scripts can be placed in the &lt;body&gt;, or in the &lt;head&gt; section of an HTML page, or in both.</strong>
                 
                 <h4>External JavaScript</h4>
                 Scripts can also be placed in external files.
                 External scripts are practical when the same code is used in many different web pages.
-                JavaScript files have the file extension .js.
-                To use an external script, put the name of the script file in the src (source) attribute of a &lt;script&gt; tag:
+                JavaScript files have the file extension <span class="snippet">.js</span>.
+                To use an external script, put the name of the script file in the <span class="snippet">src</span> (source) attribute of a <span class="snippet">&lt;script&gt;</span> tag:
 
-                <code> <h5>Example</h5>
-                    &lt;script src="myScript.js"&gt;&lt;/script&gt;               
+                <code> <h5>Example</h5>&lt;script src="myScript.js"&gt;&lt;/script&gt;               
                 </code>
             </article>
         
@@ -112,9 +111,9 @@
                 JavaScript can "display" data in different ways:<br/>
                 Writing into an HTML element, using innerHTML.
                 <ul>
-                	<li>Writing into the HTML output using document.write().</li>
-                	<li>Writing into an alert box, using window.alert().</li>
-                	<li>Writing into the browser console, using console.log().</li>
+                	<li>Writing into the HTML output using <span class="snippet">document.write()</span>.</li>
+                	<li>Writing into an alert box, using <span class="snippet">window.alert()</span>.</li>
+                	<li>Writing into the browser console, using <span class="snippet">console.log()</span>.</li>
                 </ul>
             </article>
             <article>
@@ -122,26 +121,22 @@
                 JavaScript statements are composed of:
                 Values, Operators, Expressions, Keywords, and Comments.
                 Semicolons separate JavaScript statements.
-                Add a semicolon at the end of each executable statement.
+                Add a <strong>semicolon</strong> at the end of each executable statement.
 
-                <code> <h5>Example</h5>
-                    var x, y, z;    // Statement 1
+                <code> <h5>Example</h5>var x, y, z;    // Statement 1
                     x = 5;          // Statement 2
                     y = 6;          // Statement 3
                     z = x + y;      // Statement 4
                 </code>
 
                 When separated by semicolons, multiple statements on one line are allowed:
-                <code> <h5>Example</h5>
-                    a = 5; b = 6; c = a + b;
-                </code>
+                <code> <h5>Example</h5>a = 5; b = 6; c = a + b;</code>
             </article>
 
             <article>
                 <h4>JavaScript Syntax</h4>
                 JavaScript syntax is the set of rules, how JavaScript programs are constructed:
-                <code> <h5>Example</h5>
-                    var x, y;          // How to declare variables
+                <code> <h5>Example</h5>var x, y;          // How to declare variables
                     x = 5; y = 6;      // How to assign values
                     z = x + y;         // How to compute values
                 </code>
@@ -182,8 +177,7 @@
                 <h4>Variables</h4>
                 JavaScript variables are containers for storing data values.
 
-                <code> <h5>Example</h5>
-                    var x = 5;
+                <code> <h5>Example</h5>var x = 5;
                     var y = 6;
                     var z = x + y;
                 </code>
@@ -220,8 +214,7 @@
                     JavaScript can handle many types of data, but for now, just think of numbers and strings.<br/>
                     Strings are written inside double or single quotes. Numbers are written without quotes.<br/>
                 </p>
-                <code> <h5>Example</h5>
-                    var pi = 3.14;
+                <code> <h5>Example</h5>var pi = 3.14;
                     var person = "John Doe";
                     var answer = 'Yes I am!';                    
                 </code>
@@ -231,9 +224,7 @@
                         You can declare many variables in one statement.
                         Start the statement with var and separate the variables by comma:                        
                 </p>
-                <code> <h5>Example</h5>
-                    var person = "John Doe", carName = "Volvo", price = 200;                   
-                </code>
+                <code> <h5>Example</h5>var person = "John Doe", carName = "Volvo", price = 200;</code>
             </article>
         </section>
 
@@ -243,16 +234,13 @@
             <article>
                 <h4>Assignment</h4>
                 <p>The assignment operator (=) assigns a value to a variable.</p>
-                <code><h5>Example</h5>
-                    var x = 10;
-                </code>
+                <code><h5>Example</h5>var x = 10;</code>
             </article>
 
             <article>
                 <h4>Adding</h4>
                 <p>The addition operator (+) adds numbers:</p>
-                <code><h5>Example</h5>
-                    var x = 5;
+                <code><h5>Example</h5>var x = 5;
                     var y = 2;
                     var z = x + y;
                 </code>
@@ -261,8 +249,7 @@
             <article>
                 <h4>Multiplying</h4>
                 <p>The multiplication operator (*) multiplies numbers.</p>
-                <code><h5>Example</h5>
-                    var x = 5;
+                <code><h5>Example</h5>var x = 5;
                     var y = 2;
                     var z = x * y;                    
                 </code>
@@ -334,8 +321,7 @@
             <article>
                 <h4>JavaScript String Operators</h4>
                 <p>The + operator can also be used to add (concatenate) strings.</p>
-                <code><h5>Example</h5>
-                    var txt1 = "John";
+                <code><h5>Example</h5>var txt1 = "John";
                     var txt2 = "Doe";
                     var txt3 = txt1 + " " + txt2;                                       
                 </code>
@@ -345,8 +331,7 @@
                 </p>
 
                 <p class="par">The += assignment operator can also be used to add (concatenate) strings:</p>
-                <code><h5>Example</h5>
-                    var txt1 = "What a very ";
+                <code><h5>Example</h5>var txt1 = "What a very ";
                     txt1 += "nice day";                                                          
                 </code>
                 <p class="note">
@@ -356,8 +341,7 @@
 
                 <h4>Adding Strings and Numbers</h4>
                 <p>Adding two numbers, will return the sum, but adding a number and a string will return a string:</p>
-                <code><h5>Example</h5>
-                    var x = 5 + 5;
+                <code><h5>Example</h5>var x = 5 + 5;
                     var y = "5" + 5;
                     var z = "Hello" + 5;                                                                             
                 </code>
@@ -373,8 +357,7 @@
                 <br/>
                 JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
                 </p>
-                <code><h5>Example</h5>
-                    var x;           // Now x is undefined
+                <code><h5>Example</h5>var x;           // Now x is undefined
                     x = 5;           // Now x is a Number
                     x = "John";      // Now x is a String
                 </code>
@@ -383,8 +366,7 @@
             <article>
                 <h4>JavaScript Strings</h4>
                 <p>A string (or a text string) is a series of characters like "John Doe".</p>
-                <code><h5>Example</h5>
-                    var carName = "Volvo XC60";   // Using double quotes
+                <code><h5>Example</h5>var carName = "Volvo XC60";   // Using double quotes
                     var carName = 'Volvo XC60';   // Using single quotes
                 </code>
             </article>
@@ -392,8 +374,7 @@
             <article>
                 <h4>JavaScript Numbers</h4>
                 <p>JavaScript has only one type of numbers.</p>
-                <code><h5>Example</h5>
-                    var x1 = 34.00;     // Written with decimals
+                <code><h5>Example</h5>var x1 = 34.00;     // Written with decimals
                     var x2 = 34;        // Written without decimals
                 </code>
             </article>
@@ -401,8 +382,7 @@
             <article>
                 <h4>JavaScript Booleans</h4>
                 <p>Booleans can only have two values: true or false.</p>
-                <code><h5>Example</h5>
-                    var x = 5;
+                <code><h5>Example</h5>var x = 5;
                     var y = 5;
                     var z = 6;
                     (x == y)       // Returns true
@@ -423,8 +403,7 @@
                 <p>JavaScript objects are written with curly braces.
                     Object properties are written as name:value pairs, separated by commas.
                 </p>
-                <code><h5>Example</h5>
-                    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+                <code><h5>Example</h5>var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
                 </code>
             </article>
         </section>
@@ -449,11 +428,10 @@
 
             <article>
                 <h4>The if Statement</h4>
-                <p>Use the if statement to specify a block of JavaScript code to be executed if a condition is true.</p>
+                <p>Use the <span class="snippet">if</span> statement to specify a block of JavaScript code to be executed if a condition is true.</p>
                 <code><h5>Example
                         Make a "Good day" greeting if the hour is less than 18:00:
-                        </h5>                        
-                        if (hour < 18) {
+                        </h5>if (hour &lt; 18) {
                         &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good day";
                         }
                 </code>
@@ -461,11 +439,10 @@
 
             <article>
                 <h4>The else Statement</h4>
-                <p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+                <p>Use the <span class="snippet">else</span> statement to specify a block of code to be executed if the condition is false.</p>
                 <code><h5>Example
                         If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":
-                        </h5>                        
-                        if (hour < 18) {
+                        </h5>if (hour &lt; 18) {
                             &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good day";
                         } else {
                             &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good evening";
@@ -475,14 +452,13 @@
 
             <article>
                 <h4>The else if Statement</h4>
-                <p>Use the else if statement to specify a new condition if the first condition is false.</p>
+                <p>Use the <span class="snippet">else if</span> statement to specify a new condition if the first condition is false.</p>
                 <code><h5>
                         Example
                         If time is less than 10:00, create a "Good morning" greeting, if not, but time is less than 20:00, create a "Good day" greeting, otherwise a "Good evening":
-                        </h5>
-                        if (time < 10) {
+                        </h5>if (time &lt; 10) {
                             &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good morning";
-                        } else if (time < 20) {
+                        } else if (time &lt; 20) {
                             &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good day";
                         } else {
                             &nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good evening";
@@ -492,15 +468,14 @@
 
             <article>
                 <h4>JavaScript Switch Statement</h4>
-                <p>The switch statement is used to perform different actions based on different conditions.</p>
+                <p>The <span class="snippet">switch</span> statement is used to perform different actions based on different conditions.</p>
                 This is how it works:
                 <ul>
                     <li>The switch expression is evaluated once.</li>
                     <li>The value of the expression is compared with the values of each case.</li>
                     <li>If there is a match, the associated block of code is executed.</li>
                 </ul>
-                <code><h5>Example</h5>
-                        switch (new Date().getDay()) {
+                <code><h5>Example</h5>switch (new Date().getDay()) {
                             &nbsp;&nbsp;case 0:
                             &nbsp;&nbsp;&nbsp;&nbsp;day = "Sunday";
                             &nbsp;&nbsp;&nbsp;&nbsp;break;
@@ -524,9 +499,9 @@
                         }
                 </code>
                 <h4>The break Keyword</h4>
-                <p>When JavaScript reaches a break keyword, it breaks out of the switch block.</p>
+                <p>When JavaScript reaches a <span class="snippet">break</span> keyword, it breaks out of the switch block.</p>
                 <h4>The default Keyword</h4>
-                <p>The default keyword specifies the code to run if there is no case match:</p>
+                <p>The <span class="snippet">default</span> keyword specifies the code to run if there is no case match:</p>
 
             </article>
         </section>
@@ -539,31 +514,29 @@
 
                 <h4>Different Kinds of Loops</h4>
                 <ul>
-                    <li>for - loops through a block of code a number of times</li>
-                    <li>for/in - loops through the properties of an object</li>
-                    <li>while - loops through a block of code while a specified condition is true</li>
-                    <li>do/while - also loops through a block of code while a specified condition is true</li>
+                    <li><span class="snippet">for</span> - loops through a block of code a number of times</li>
+                    <li><span class="snippet">for/in</span> - loops through the properties of an object</li>
+                    <li><span class="snippet">while</span> - loops through a block of code while a specified condition is true</li>
+                    <li><span class="snippet">do/while</span> - also loops through a block of code while a specified condition is true</li>
                 </ul>
 
                 <h4>The For Loop</h4>
-                <code><h5>Example</h5>
-                    for (i = 0; i &lt; 5; i++) {
+                <code><h5>Example</h5>for (i = 0; i &lt; 5; i++) {
                         &nbsp;&nbsp;text += "The number is " + i;
                     }                  
                 </code>
-                <p>Normally you will use statement 1 to initialize the variable used in the loop (i = 0).</p>
-                <p>Often statement 2 is used to evaluate the condition of the initial variable.
+                <p>Normally you will use <strong>statement 1 to initialize the variable</strong> used in the loop (i = 0).</p>
+                <p>Often <strong>statement 2 is used to evaluate the condition</strong> of the initial variable.
                     If statement 2 returns true, the loop will start over again, if it returns false, the loop will end.
                 </p>
-                <p>Often statement 3 increments the value of the initial variable.</p>
+                <p>Often <strong>statement 3 increments the value</strong> of the initial variable.</p>
                 <P>Statement 3 can do anything like negative increment (i--), positive increment (i = i + 15), or anything else.</P>
             </article>
 
             <article>
                 <h4>The For/In Loop</h4>
                 <p>The JavaScript for/in statement loops through the properties of an object:</p>
-                <code><h5>Example</h5>
-                    var person = {fname:"John", lname:"Doe", age:25}; 
+                <code><h5>Example</h5>var person = {fname:"John", lname:"Doe", age:25}; 
 
                     var text = "";
                     var x;
@@ -578,8 +551,7 @@
                 <p>Loops can execute a block of code as long as a specified condition is true.</p>
                 <p>The while loop loops through a block of code as long as a specified condition is true.</p>
                 <p>In the following example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10:</p>
-                <code><h5>Example</h5>
-                    while (i &lt; 10) {
+                <code><h5>Example</h5>while (i &lt; 10) {
                         &nbsp;&nbsp;text += "The number is " + i;
                         &nbsp;&nbsp;i++;
                     }                
@@ -589,8 +561,7 @@
             <article>
                 <h4>The Do/While Loop</h4>
                 <p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
-                <code><h5>Example</h5>
-                    do {
+                <code><h5>Example</h5>do {
                         &nbsp;&nbsp;text += "The number is " + i;
                         &nbsp;&nbsp;i++;
                     }
@@ -605,11 +576,10 @@
 
             <article>
                 <h4>The Break Statement</h4>
-                <p>The break statement can also be used to jump out of a loop.  
+                <p>The <span class="snippet">break</span> statement can also be used to jump out of a loop.  
                     The break statement breaks the loop and continues executing the code after the loop 
                 </p>
-                <code>
-                    for (i = 0; i &lt; 10; i++) {
+                <code>for (i = 0; i &lt; 10; i++) {
                         &nbsp;&nbsp;if (i === 3) 
                         &nbsp;&nbsp;&nbsp;&nbsp;break;
                     }
@@ -618,9 +588,8 @@
 
             <article>
                 <h4>The Continue Statement</h4>
-                <p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
-                <code>
-                    for (i = 0; i &lt; 10; i++) {
+                <p>The <span class="snippet">continue</span> statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+                <code>for (i = 0; i &lt; 10; i++) {
                         &nbsp;&nbsp;if (i === 3)
                         &nbsp;&nbsp;&nbsp;&nbsp;continue;
                         &nbsp;&nbsp;console.log(i);
@@ -637,12 +606,11 @@
                         A JavaScript function is executed when "something" invokes it (calls it).
                 </p>
                 <h4>Syntax</h4>
-                <code>
-                    function myFunction(p1, p2) {
+                <code>function myFunction(p1, p2) {
                         &nbsp;&nbsp;&nbsp;&nbsp;return p1 * p2;              // The function returns the product of p1 and p2
                     }
                 </code>
-                <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
+                <p>A JavaScript function is defined with the <span class="snippet">function</span> keyword, followed by a name, followed by parentheses ().</p>
                 <p>The parentheses may include parameter names separated by commas:
                         (parameter1, parameter2, ...)</p>
             </article>
@@ -660,8 +628,7 @@
             <article>
                 <h4>Example of simple function</h4>
                 <p>The sum() function receives 2 arguments, add them and logs the result</p>
-                <code><h5>Example</h5>
-                    function sum(a, b){
+                <code><h5>Example</h5>function sum(a, b){
                         &nbsp;&nbsp;&nbsp;&nbsp; var s = a + b;
                         &nbsp;&nbsp;&nbsp;&nbsp; console.log(s);
                     }
@@ -681,12 +648,10 @@
             <h2>JavaScript Arrays</h2>
             <article>
                 <p>JavaScript arrays are used to store multiple values in a single variable.</p>
-                <code><h5>Example</h5>
-                    var cars = ["Saab", "Volvo", "BMW"];
-                </code>
+                <code><h5>Example</h5>var cars = ["Saab", "Volvo", "BMW"];</code>
+                
                 <p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
-                <code><h5>Example</h5>
-                    var cars = [
+                <code><h5>Example</h5>var cars = [
                     &nbsp;&nbsp;"Saab",
                     &nbsp;&nbsp;"Volvo",
                     &nbsp;&nbsp;"BMW"
@@ -698,9 +663,8 @@
                 <h4>Access the Elements of an Array</h4>
                 <p>You access an array element by referring to the index number.
                     <br>This statement accesses the value of the first element in cars:</p>
-                <code>
-                        var name = cars[0];
-                </code>
+                <code>var name = cars[0];</code>
+
                 <p class="note">
                         Array indexes start with 0. <br>
                         [0] is the first element. [1] is the second element.
@@ -716,8 +680,7 @@
             <article>
                 <h4>Array Properties and Methods</h4>
                 <p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
-                <code>
-                        var x = cars.length;   // length property returns the number of elements
+                <code>var x = cars.length;   // length property returns the number of elements
                         var y = cars.sort();   // The sort() method sorts arrays
                 </code>
             </article>
@@ -725,18 +688,16 @@
             <article>
                 <h4>Looping Array Elements</h4>
                 <p>The safest way to loop through an array, is using a "for" loop:</p>
-                <code>
-                    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];
                     fLen = fruits.length;
                     
-                    for (i = 0; i < fLen; i++) {
+                    for (i = 0; i &lt; fLen; i++) {
                         &nbsp;&nbsp;console.log(fruits[i]);
                     }
                 </code>
 
-                <p>You can also use the Array.forEach() function:</p>
-                <code>
-                    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <p>You can also use the <span class="snippet">Array.forEach()</span> function:</p>
+                <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];
                     
                     fruits.forEach(myFunction);
                     
@@ -748,8 +709,7 @@
 
             <article>
                 <h4>Adding Array Elements</h4>
-                <code>
-                    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];
                     fruits.push("Lemon"); // adds a new element (Lemon) to fruits
                 </code>
             </article>
@@ -760,9 +720,8 @@
             <h2>JavaScript Array Methods</h2>
             <article>
                 <h4>Converting Arrays to Strings</h4>
-                <p>The join() method also joins all array elements into a string.</p>
-                <code>
-                    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <p>The <span class="snippet">join()</span> method also joins all array elements into a string.</p>
+                <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];
                     var s = fruits.join(" - ");
                 </code>
                 <p class="note">
@@ -772,16 +731,14 @@
 
             <article>
                 <h4>Popping and Pushing</h4>
-                <p>The pop() method removes the last element from an array:</p>
-                <code>
-                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <p>The <span class="snippet">pop()</span> method removes the last element from an array:</p>
+                <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];
                         fruits.pop(); // Removes the last element ("Mango") from fruits
                 </code>
                 <p class="note">The pop() method returns the value that was "popped out":</p>
 
-                <p>The push() method adds a new element to an array (at the end):</p>
-                <code>
-                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <p>The <span class="snippet">push()</span> method adds a new element to an array (at the end):</p>
+                <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];
                         fruits.push("Kiwi");       //  Adds a new element ("Kiwi") to fruits
                 </code>
                 <p class="note">The push() method returns the new array length:</p>
@@ -789,16 +746,14 @@
 
             <article>
                 <h4>Shifting Elements</h4>
-                <p>The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
-                <code>
-                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <p>The <span class="snippet">shift()</span> method removes the first array element and "shifts" all other elements to a lower index.</p>
+                <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];
                         fruits.shift(); // Removes the first element "Banana" from fruits                        
                 </code>
                 <p class="note">The shift() method returns the string that was "shifted out":</p>
 
-                <p>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:</p>
-                <code>
-                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <p>The <span class="snippet">unshift()</span> method adds a new element to an array (at the beginning), and "unshifts" older elements:</p>
+                <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];
                         fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits
                 </code>
                 <p class="note">The unshift() method returns the new array length.</p>
@@ -807,9 +762,8 @@
 
             <article>
                 <h4>Sorting an Array</h4>
-                <p>The sort() method sorts an array alphabetically:</p>
-                <code>
-                        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <p>The <span class="snippet">sort()</span> method sorts an array alphabetically:</p>
+                <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];
                         fruits.sort();        // Sorts the elements of fruits
                 </code>
             </article>
@@ -820,9 +774,8 @@
             <article>
                 <p>Array iteration methods operate on every array item.</p>
                 <h4>Array.forEach()</h4>
-                <p>The forEach() method calls a function (a callback function) once for each array element.</p>
-                <code>
-                    var numbers = [45, 4, 9, 16, 25];
+                <p>The <span class="snippet">forEach()</span> method calls a function (a callback function) once for each array element.</p>
+                <code>var numbers = [45, 4, 9, 16, 25];
                     numbers.forEach(function(value){
                         &nbsp;&nbsp;console.log(value);
                     });
@@ -831,11 +784,10 @@
 
             <article>
                 <h4>Array.map()</h4>
-                <p>The map() method creates a new array by performing a function on each array element.</p>
-                <p>The map() method does not change the original array.</p>
+                <p>The <span class="snippet">map()</span> method creates a new array by performing a function on each array element.</p>
+                <p>The <span class="snippet">map()</span> method does not change the original array.</p>
                 <p>This example multiplies each array value by 2:</p>
-                <code>
-                    var numbers1 = [45, 4, 9, 16, 25];
+                <code>var numbers1 = [45, 4, 9, 16, 25];
                     var numbers2 = numbers1.map(myFunction);
                     
                     function myFunction(value, index, array) {
@@ -844,8 +796,7 @@
                 </code>
 
                 <p class="note">We can write the same using inline anonymous function:</p>
-                <code>
-                    var numbers1 = [45, 4, 9, 16, 25];
+                <code>var numbers1 = [45, 4, 9, 16, 25];
                     var numbers2 = numbers1.map(function(item){
                         &nbsp;&nbsp;return item * 2;
                     });
@@ -854,14 +805,13 @@
 
             <article>
                 <h4>Array.filter()</h4>
-                <p>The filter() method creates a new array with array elements that passes a test.</p>
+                <p>The <span class="snippet">filter()</span> method creates a new array with array elements that passes a test.</p>
                 <p>This example creates a new array from elements with a value larger than 18:</p>
-                <code>
-                    var numbers = [45, 4, 9, 16, 25];
+                <code>var numbers = [45, 4, 9, 16, 25];
                     var over18 = numbers.filter(myFunction);
                     
                     function myFunction(item) {
-                        &nbsp;&nbsp;return item > 18;
+                        &nbsp;&nbsp;return item &gt; 18;
                     }
                 </code>
             </article>
@@ -869,8 +819,7 @@
             <article>
                 <h4>Array.indexOf()</h4>
                 <p>Search an array for an element value and returns its position.</p>
-                <code>
-                    var fruits = ["Apple", "Orange", "Apple", "Mango"];
+                <code>var fruits = ["Apple", "Orange", "Apple", "Mango"];
                     var a = fruits.indexOf("Apple");
                 </code>
             </article>
